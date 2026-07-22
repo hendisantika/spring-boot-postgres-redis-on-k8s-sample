@@ -35,6 +35,11 @@ spec:
           imagePullPolicy: "Always"
           ports:
             - containerPort: 8082
+          env:
+            - name: REDIS_HOST
+              value: svc-redis.redis-cluster.svc.cluster.local
+            - name: REDIS_PORT
+              value: "6379"
 #          env:
 #            - name: DB_HOST
 #              valueFrom:
